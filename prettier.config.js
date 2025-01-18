@@ -1,14 +1,12 @@
-module.exports = {
-    plugins: ["prettier-plugin-tailwindcss"],
-    tailwindConfig: "./tailwind.config.ts",
-    tabWidth: 4,
-    useTabs: false,
-    semi: true,
-    singleQuote: false,
-    jsxSingleQuote: false,
-    trailingComma: "es5",
-    arrowParens: "always",
-    pluginSearchDirs: ["."],
-    printWidth: 120,
-    bracketSameLine: true,
-};
+export const plugins = ["prettier-plugin-tailwindcss"];
+export const tailwindConfig = "./tailwind.config.ts";
+export const tabWidth = 4;
+export const useTabs = false;
+export const semi = true;
+export const singleQuote = false;
+export const jsxSingleQuote = false;
+export const trailingComma = "es5";
+export const arrowParens = "always";
+export const pluginSearchDirs = ["."];
+export const printWidth = 120;
+export const bracketSameLine = true;
