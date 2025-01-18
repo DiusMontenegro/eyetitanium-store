@@ -22,7 +22,8 @@ export default function Home() {
                 </div>
                 <div className="relative hidden h-full w-1/2 md:block">
                     <Image
-                        src="/assets/EyeTitanium+logo.png"
+                        priority
+                        src="/assets/EyeTitaniumlogo.webp"
                         alt="titanium-eyglass-frame"
                         className="h-full object-cover"
                         width={1000}
