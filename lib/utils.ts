@@ -1,7 +1,6 @@
 import { products } from "@wix/stores";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
-import { getWixClient } from "./wix-client.base";
 
 // function to overwriteexisting tailwind class
 export function cn(...inputs: ClassValue[]) {
@@ -27,20 +26,5 @@ export function getFormattedPrice(product: products.Product) {
         return `from ${formatCurrency(minPrice, product.priceData?.currency)}`;
     } else {
         return product.priceData?.formatted?.discountedPrice || product.priceData?.formatted?.price || "n/a";
-    }
-}
-
-// Get Cart function
-export async function getCart() {
-    const wixClient = getWixClient();
-
-    try {
-        return await wixClient.currentCart.getCurrentCart();
-    } catch (error) {
-        if ((error as any).details.applicationError.code === "OWNED_CART_NOT_FOUND") {
-            return null;
-        } else {
-            throw error;
-        }
     }
 }
